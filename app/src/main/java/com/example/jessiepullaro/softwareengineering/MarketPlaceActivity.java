@@ -1,12 +1,26 @@
 package com.example.jessiepullaro.softwareengineering;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+
 /**
  * Created by slatercolteryahn on 11/28/17.
  */
 
-public class MarketPlaceActivity {
+public class MarketPlaceActivity extends Activity {
 
-    /*
+Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
+
+    public Integer housePrice = 5;
+    public Integer carPrice  = 4;
+    public Integer breadPrice = 1;
+    public Integer waterPrice  = 1;
+    public Integer chickenPrice  = 2;
+    public Integer spicyEnchiladaPrice = 10;
+    public Integer pubSubPrice = 10;
 
     public Integer house;
     public Integer car;
@@ -16,62 +30,71 @@ public class MarketPlaceActivity {
     public Integer spicyEnchilada;
     public Integer pubSub;
 
-     private void buyHouse(){
+    String strHouse;
+    String strCar;
+    String strBread;
+    String strWater;
+    String strChicken;
+    String strEnchilada;
+    String str
 
-          numCoins--;
-          house++;
-          PlaceHouseIntoDataBase();
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstancesBundle)
+    {
+        super.onCreate(savedInstancesBundle);
+        setContentView(R.layout.marketplace_activity);
+
+        preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
+
+    }
+
+
+
+     public void onBuyHouse(View view){
+
+
 
      }
 
-     buyCar()
+    public void onBuyCar(View view)
      {
 
-          numCoins--;
-          car++;
-          PlaceCarIntoDataBase();
 
      }
 
-     buyBread()
+     public void onBuyBread(View view)
      {
 
-          numCoins--;
-          bread++;
-          PlaceBreadIntoDataBase();
+
      }
-     buyWater()
+    public void onBuyWater(View view)
      {
 
-          numCoins--;
-          water++;
-          PlaceWaterIntoDataBase();
+
 
      }
-     buyChicken()
+     public void onBuyChicken(View view)
      {
 
-          numCoins--;
-          chicken++;
-          PlaceChickenIntoDataBase();
+
      }
-     buySpicyEnchilada ()
+    public void onBuyEnchilada (View view)
      {
 
-          numCoins--;
-          spicyEnchilada++;
-          PlaceSpicyEnchiladaIntoDataBase();
+
      }
-     buyPubSub()
+    public void onBuyPubSub(View view)
      {
 
-          numCoins--;
-          pubSub++;
-          PlacePubSubIntoDataBase();
+
      }
 
 
 
 
-    */
+
 }
