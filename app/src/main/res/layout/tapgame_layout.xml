@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/tabButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="181dp"
+        android:onClick="buttonTapped"
+        android:text="@string/tapButton" />
+
+    <TextView
+        android:id="@+id/counterTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:text="@string/zero"
+        android:textSize="68sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tabButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tabButton"
+        android:layout_marginBottom="54dp"
+        android:onClick="goBackToMenu"
+        android:text="@string/backButton" />
+</RelativeLayout>

@@ -13,4 +13,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- String values for the TapGame interface -->
+    <string name="tapButton">TAP</string>
+    <string name="zero">0</string>
+    <string name="backButton">Exit Game</string>
+
 </resources>
