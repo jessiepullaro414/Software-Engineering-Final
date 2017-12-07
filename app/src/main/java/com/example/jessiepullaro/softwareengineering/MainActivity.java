@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         counterView = (TextView) findViewById(R.id.counters);
       //  preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
-       thisPreference.getPreferences("data", )
     }
 
     public void onStart() {
@@ -37,7 +36,7 @@ public class MainActivity extends Activity {
 
     public void counterUpdate(){
 
-        counterView.setText(preferences.getString("numPressed", null));
+        counterView.setText(thisPreference.getPref("numPressed", null));
     }
     public void goToMarketplace(View view)
     {
