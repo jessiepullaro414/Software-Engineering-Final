@@ -42,11 +42,11 @@ public class TapActivity extends Activity{
 
     public void goBackToMenu(View view)
     {
-        int a = Integer.parseInt(preferences.getString("numPressed", null));
+        int a = Integer.parseInt(preferences.getString("TOTAL_COINS", null));
         numTappedString = numTapped.getText().toString();
         int n = Integer.parseInt(numTappedString);
 
-        editor.putString("numPressed", String.valueOf(n+a) );
+        editor.putString("TOTAL_COINS", String.valueOf(n+a) );
         editor.commit();
         finish();
     }

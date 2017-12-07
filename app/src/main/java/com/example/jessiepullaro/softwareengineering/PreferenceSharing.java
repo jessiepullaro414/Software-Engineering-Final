@@ -37,7 +37,7 @@ public class PreferenceSharing extends PreferenceActivity {
             spe.commit();
         }
 
-        public boolean getPref(String key, boolean defValue) {
+        public boolean getPref(String key, MarketPlaceActivity defValue) {
             SharedPreferences sp = getPreferences();
             if (sp == null)
                 return defValue;
@@ -67,12 +67,6 @@ public class PreferenceSharing extends PreferenceActivity {
             spe.commit();
         }
 
-        public String getPref(String key, String defValue) {
-            SharedPreferences sp = getPreferences();
-            if (sp == null)
-                return defValue;
-            return sp.getString(key, defValue);
-        }
 
         public void putPref(String key, String val) {
             SharedPreferences.Editor spe = getEditor();

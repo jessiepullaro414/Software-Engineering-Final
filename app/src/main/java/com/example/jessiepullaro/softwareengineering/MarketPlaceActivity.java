@@ -37,8 +37,8 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
     private static final String BOUGHT_PUBSUB = "strPubSub";
 
 
-    SharedPreferences preferences;
-    SharedPreferences.Editor editor;
+
+    PreferenceSharing preferenceObject;
 
     TextView viewHouse;
     TextView viewCar;
@@ -58,22 +58,23 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         setContentView(R.layout.marketplace_activity);
 
 
-        preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String value = (preferences.getString("data", "Market_Value"));
-        editor = preferences.edit();
+
 
 
     }
 
     public void onBuyHouse(View view){
 
-        if(housePrice < preferences.getInt(TOTAL_COINS, -1)) {
-            editor.putInt(TOTAL_COINS, -housePrice);
-            editor.putInt(BOUGHT_HOUSE, 1);
-        }
-        else{
+
+
+        if(housePrice > preferenceObject.getPref(TOTAL_COINS,  )) {
 
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
+
+        }
+        else{
+            preferenceObject.putPref(TOTAL_COINS, --housePrice);
+            preferenceObject.putPref(BOUGHT_HOUSE, 1);
         }}
 
     public void onBuyCar(View view)

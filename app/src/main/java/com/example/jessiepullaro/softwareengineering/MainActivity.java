@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private TextView counterView;
-    SharedPreferences preferences;
+
     PreferenceSharing thisPreference;
 
     @Override
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstancesBundle);
         setContentView(R.layout.activity_main);
         counterView = (TextView) findViewById(R.id.counters);
-      //  preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
+
     }
 
     public void onStart() {
