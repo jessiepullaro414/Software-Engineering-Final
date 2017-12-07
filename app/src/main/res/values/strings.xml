@@ -13,7 +13,37 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+
+    <!-- String values for the main screen -->
     <string name="marketplace">MarketPlace</string>
     <string name="minigame">Mini-Game</string>
     <string name="inventory">Inventory</string>
+
+
+    <!-- String values for the TapGame interface -->
+    <string name="tapButton">TAP</string>
+    <string name="zero">0</string>
+    <string name="backButton">Exit Game</string>
+
+
+    <!-- String related to MarketPlace Activity -->
+    <string name="buy_house">House</string>
+    <string name="buy_car">Car</string>
+    <string name="buy_bread">Bread</string>
+    <string name="buy_water">Water</string>
+    <string name="buy_chicken">Chicken</string>
+    <string name="buy_enchilada">Spicy Enchilada</string>
+    <string name="buy_PubSub">Pub Sub</string>
+
+    <string name="house_price">10</string>
+    <string name="car_price">5</string>
+    <string name="bread_price">1</string>
+    <string name="water_price">1</string>
+    <string name="chicken_price">5</string>
+    <string name="enchilada_price">10</string>
+    <string name="pubSub_price">10</string>
+    <string name="prices">Prices</string>
+    <string name="products">Products</string>
+
 </resources>
