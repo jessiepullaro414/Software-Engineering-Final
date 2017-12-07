@@ -23,13 +23,15 @@
     <string name="buy_enchilada">Spicy Enchilada</string>
     <string name="buy_PubSub">Pub Sub</string>
 
-    <string name="house_price">5</string>
-    <string name="car_price">4</string>
+    <string name="house_price">10</string>
+    <string name="car_price">5</string>
     <string name="bread_price">1</string>
     <string name="water_price">1</string>
-    <string name="chicken_price">2</string>
+    <string name="chicken_price">5</string>
     <string name="enchilada_price">10</string>
     <string name="pubSub_price">10</string>
+    <string name="prices">Prices</string>
+    <string name="products">Products</string>
 </resources>
 
 
