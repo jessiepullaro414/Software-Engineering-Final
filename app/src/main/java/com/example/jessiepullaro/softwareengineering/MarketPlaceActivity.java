@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,8 +58,8 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         setContentView(R.layout.marketplace_activity);
 
 
-        preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
-
+        preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String value = (preferences.getString("data", "Market_Value"));
         editor = preferences.edit();
 
 

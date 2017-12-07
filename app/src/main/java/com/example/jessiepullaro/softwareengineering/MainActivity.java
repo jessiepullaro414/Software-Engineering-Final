@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 
     private TextView counterView;
     SharedPreferences preferences;
+    PreferenceSharing thisPreference;
 
     @Override
     protected void onCreate(Bundle savedInstancesBundle)
@@ -25,8 +26,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstancesBundle);
         setContentView(R.layout.activity_main);
         counterView = (TextView) findViewById(R.id.counters);
-        preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
-
+      //  preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
+       thisPreference.getPreferences("data", )
     }
 
     public void onStart() {
@@ -55,4 +56,5 @@ public class MainActivity extends Activity {
         Intent i = new Intent(MainActivity.this, TapActivity.class);
         startActivity(i);
     }
+
 }
