@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/spacebackground"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/tabButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="181dp"
-        android:onClick="buttonTapped"
-        android:text="@string/tapButton" />
 
     <TextView
         android:id="@+id/counterTV"
@@ -20,16 +12,30 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="92dp"
         android:text="@string/zero"
+        android:textColor="@android:color/white"
         android:textSize="68sp" />
+
+
+    <ImageButton
+        android:id="@+id/tabButton"
+        android:background="@null"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:onClick="buttonTapped"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        app:srcCompat="@drawable/spacerock"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="87dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tabButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/tabButton"
-        android:layout_marginBottom="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
         android:onClick="goBackToMenu"
         android:text="@string/backButton" />
 </RelativeLayout>

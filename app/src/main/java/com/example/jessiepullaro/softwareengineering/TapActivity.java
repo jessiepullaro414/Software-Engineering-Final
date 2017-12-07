@@ -19,6 +19,7 @@ public class TapActivity extends Activity{
     private String numTappedString;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
+    PreferenceSharing thisPreference;
 
     @Override
     public void onCreate(Bundle savedInstancesState)
