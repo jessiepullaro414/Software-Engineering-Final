@@ -118,9 +118,10 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
         android:layout_alignLeft="@+id/textView3"
         android:layout_alignStart="@+id/textView3"
-        android:layout_centerVertical="true"
         android:text="@string/chicken_price" />
 
     <TextView
@@ -155,10 +156,10 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignEnd="@+id/floatingActionButton"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="19dp"
+        android:layout_alignRight="@+id/floatingActionButton"
+        android:layout_marginTop="18dp"
         android:text="@string/prices" />
 
     <TextView
@@ -169,4 +170,18 @@
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button"
         android:text="@string/products" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_plus_sign" />
+
 </RelativeLayout>

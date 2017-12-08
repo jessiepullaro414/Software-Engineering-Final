@@ -37,8 +37,8 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
     private static final String BOUGHT_PUBSUB = "strPubSub";
 
 
-
-    PreferenceSharing preferenceObject;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     TextView viewHouse;
     TextView viewCar;
@@ -58,23 +58,23 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         setContentView(R.layout.marketplace_activity);
 
 
-
+        preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String value = (preferences.getString("data", "Market_Value"));
+        editor = preferences.edit();
 
 
     }
 
     public void onBuyHouse(View view){
 
-
-
-        if(housePrice > preferenceObject.getPref(TOTAL_COINS,  )) {
-
-            Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
-
+        if(housePrice < preferences.getInt(TOTAL_COINS, -1)) {
+            editor.putInt(TOTAL_COINS, -housePrice);
+            editor.putInt(BOUGHT_HOUSE, 1);
+            editor.commit();
         }
         else{
-            preferenceObject.putPref(TOTAL_COINS, --housePrice);
-            preferenceObject.putPref(BOUGHT_HOUSE, 1);
+
+            Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
         }}
 
     public void onBuyCar(View view)
@@ -82,6 +82,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(carPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -carPrice);
             editor.putInt(BOUGHT_CAR, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
@@ -94,6 +95,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(breadPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -breadPrice);
             editor.putInt(BOUGHT_BREAD, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
@@ -105,6 +107,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(waterPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -waterPrice);
             editor.putInt(BOUGHT_WATER, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
@@ -115,6 +118,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(chickenPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -chickenPrice);
             editor.putInt(BOUGHT_CHICKEN, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
@@ -126,6 +130,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(spicyEnchiladaPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -spicyEnchiladaPrice);
             editor.putInt(BOUGHT_ENCHILADA, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);
@@ -137,6 +142,7 @@ Intent i = new Intent(String.valueOf(MarketPlaceActivity.this));
         if(pubSubPrice < preferences.getInt(TOTAL_COINS, -1)) {
             editor.putInt(TOTAL_COINS, -pubSubPrice);
             editor.putInt(BOUGHT_PUBSUB, 1);
+            editor.commit();
         }
         else{
             Toast.makeText(getApplicationContext(), "You don't own enough Coin!", Toast.LENGTH_SHORT);

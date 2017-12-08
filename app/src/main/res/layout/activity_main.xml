@@ -40,6 +40,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="63dp"
-        android:text="@string/zero"
+        android:text="@string/house_price"
         android:textSize="40sp" />
 </RelativeLayout>

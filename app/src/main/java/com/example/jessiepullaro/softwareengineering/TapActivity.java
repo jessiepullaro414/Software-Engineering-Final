@@ -1,6 +1,8 @@
 package com.example.jessiepullaro.softwareengineering;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +14,12 @@ import android.widget.TextView;
 /**
  * Created by Rigaud and Jessie on 11/29/2017.
  */
-
 public class TapActivity extends Activity{
     private Counter counter;
     private TextView  numTapped;
     private String numTappedString;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    PreferenceSharing thisPreference;
 
     @Override
     public void onCreate(Bundle savedInstancesState)
@@ -42,12 +42,13 @@ public class TapActivity extends Activity{
 
     public void goBackToMenu(View view)
     {
-        int a = Integer.parseInt(preferences.getString("TOTAL_COINS", null));
+        int a = Integer.parseInt(preferences.getString("numPressed", null));
         numTappedString = numTapped.getText().toString();
         int n = Integer.parseInt(numTappedString);
 
-        editor.putString("TOTAL_COINS", String.valueOf(n+a) );
+        editor.putString("numPressed", String.valueOf(n+a) );
         editor.commit();
         finish();
     }
 }
+

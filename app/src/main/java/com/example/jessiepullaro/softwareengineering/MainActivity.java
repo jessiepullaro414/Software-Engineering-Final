@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 /**
@@ -17,8 +14,8 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private TextView counterView;
-
-    PreferenceSharing thisPreference;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstancesBundle)
@@ -26,17 +23,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstancesBundle);
         setContentView(R.layout.activity_main);
         counterView = (TextView) findViewById(R.id.counters);
-
+        preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
     }
 
     public void onStart() {
         super.onStart();
-        counterUpdate();
+        //counterUpdate();
     }
 
     public void counterUpdate(){
 
-        counterView.setText(thisPreference.getPref("numPressed", null));
+        counterView.setText(preferences.getString("numPressed", null));
     }
     public void goToMarketplace(View view)
     {

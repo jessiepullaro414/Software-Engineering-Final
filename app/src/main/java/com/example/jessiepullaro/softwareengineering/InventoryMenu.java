@@ -18,7 +18,7 @@ public class InventoryMenu extends Activity {
     protected void onCreate(Bundle savedInstancesBundle)
     {
         super.onCreate(savedInstancesBundle);
-        setContentView(R.layout.marketplace_activity);
+        setContentView(R.layout.inventory_activity);
 
         preferences = getApplicationContext().getSharedPreferences("data", MODE_PRIVATE);
 
